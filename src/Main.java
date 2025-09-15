@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         // tu program główny
@@ -27,6 +29,12 @@ public class Main {
 //        Wpiszesz liczbe z klawiatury i powiesz czy ktoś zgadł
 
         int wylosowanaLiczba = (int)(Math.random() * 100) + 1;
-        System.out.println("Wylosowano " + wylosowanaLiczba);
+
+//        wczytywanie liczby z klawiatury
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj liczbe: ");
+        int zgadywanaLiczba = scanner.nextInt();
+        System.out.println("Wpisano: " + zgadywanaLiczba + " , a wylosowano: " + wylosowanaLiczba);
+
     }
 }
