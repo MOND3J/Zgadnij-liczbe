@@ -2,27 +2,27 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // tu program główny
+//        tu program główny
         System.out.println("dzień dobry");
 
-        //typy proste
-        //pisane z małej litery, zmienne a nie obiekty -> nie mają pól i metod
-        //typy całkowite
+//        typy proste
+//        pisane z małej litery, zmienne a nie obiekty -> nie mają pól i metod
+//        typy całkowite
         byte liczba1 = 100;
         short liczba2 = 300;
         int liczba3 = 1234565;
         long liczba4 = 436222749;
         System.out.println("Twoja liczba " + liczba1);
 
-        //typy zmiennoprzecinkowe, rzeczywiste, z ułamkiem
+//        typy zmiennoprzecinkowe, rzeczywiste, z ułamkiem
         float liczbaRzeczywista1 = 3.14f;
         double liczbaRzeczywista2 = 23.4564;
         System.out.println("Liczba rzeczywista " + liczbaRzeczywista2);
 
-        //typ logiczny
+//        typ logiczny
         boolean czyPrawda = true;
 
-        //typ znakowy
+//        typ znakowy
         char znak = 'a';
 
 //        Napisz program w którym wylosujesz liczbe z zakresu od 1 do 100.
@@ -34,7 +34,23 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Podaj liczbe: ");
         int zgadywanaLiczba = scanner.nextInt();
-        System.out.println("Wpisano: " + zgadywanaLiczba + " , a wylosowano: " + wylosowanaLiczba);
 
+//        Instrukcja warunkowa
+        if(wylosowanaLiczba == zgadywanaLiczba) {
+            System.out.println("Zgadles");
+        } else {
+            System.out.println("Przegrales");
+            System.out.println("Wylosowana liczba to: " + wylosowanaLiczba);
+        }
+
+        int roznica;
+        if(wylosowanaLiczba > zgadywanaLiczba) {
+            roznica = wylosowanaLiczba - zgadywanaLiczba;
+        }else {
+            roznica = zgadywanaLiczba - wylosowanaLiczba;
+        }
+
+//        Wyrażenie warunkowe -> zwraca wartość
+        roznica = zgadywanaLiczba > wylosowanaLiczba ? zgadywanaLiczba - wylosowanaLiczba : wylosowanaLiczba - zgadywanaLiczba;
     }
 }
