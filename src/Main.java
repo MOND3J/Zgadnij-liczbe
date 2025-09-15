@@ -52,5 +52,31 @@ public class Main {
 
 //        Wyrażenie warunkowe -> zwraca wartość
         roznica = zgadywanaLiczba > wylosowanaLiczba ? zgadywanaLiczba - wylosowanaLiczba : wylosowanaLiczba - zgadywanaLiczba;
+        roznica = roznica / 10; // dzielenie całkowite -> wynik całkowity bo dzielimy 2 liczby całkowite
+
+//        instrukcja wyboru
+        switch (roznica) {
+            case 0:
+                System.out.println("Bardzo blisko");
+                break;
+            case 1:
+                System.out.println("Dość blisko");
+                break;
+            case 2:
+                System.out.println("Nie najgorzej");
+                break;
+            default:
+                System.out.println("Sprobuj innym razem");
+        }
+
+//        WYrażenie switch -> zwraca wartość
+        System.out.println(
+                switch (roznica){
+                    case 0 -> "Bardzo blisko";
+                    case 1 -> "Dość blisko";
+                    case 2 -> "Nie najgorzej";
+                    default -> "Sprobuj innym razem";
+                }
+        );
     }
 }
