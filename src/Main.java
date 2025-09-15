@@ -23,6 +23,10 @@ public class Main {
         //typ znakowy
         char znak = 'a';
 
+//        Napisz program w którym wylosujesz liczbe z zakresu od 1 do 100.
+//        Wpiszesz liczbe z klawiatury i powiesz czy ktoś zgadł
 
+        int wylosowanaLiczba = (int)(Math.random() * 100) + 1;
+        System.out.println("Wylosowano " + wylosowanaLiczba);
     }
 }
